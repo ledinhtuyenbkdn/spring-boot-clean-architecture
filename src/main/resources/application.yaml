@@ -32,6 +32,8 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
     show-sql: false
+  liquibase:
+    change-log: classpath:db/db.changelog-master.xml
 
 server:
   port: 8080
