@@ -34,7 +34,8 @@ spring:
     show-sql: false
   liquibase:
     change-log: classpath:db/db.changelog-master.xml
-
+  messages:
+    basename: i18n/messages
 server:
   port: 8080
   shutdown: graceful # see https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-graceful-shutdown

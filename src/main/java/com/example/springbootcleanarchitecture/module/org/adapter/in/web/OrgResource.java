@@ -14,8 +14,10 @@ import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -65,7 +67,7 @@ public class OrgResource {
     public ResponseEntity<Org> getOrg(@PathVariable Long id) {
         log.info("REST request to get Org by Id: {}", id);
         Optional<Org> org = queryOrgUseCase.findById(id);
-        return org.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return org.map(ResponseEntity::ok).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     @GetMapping("")
