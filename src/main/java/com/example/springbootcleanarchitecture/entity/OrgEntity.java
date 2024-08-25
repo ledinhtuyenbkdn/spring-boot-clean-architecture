@@ -1,4 +1,4 @@
-package com.example.springbootcleanarchitecture.module.org.adapter.out.persistence;
+package com.example.springbootcleanarchitecture.entity;
 
 
 import jakarta.persistence.*;

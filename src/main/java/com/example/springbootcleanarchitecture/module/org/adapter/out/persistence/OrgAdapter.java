@@ -3,6 +3,7 @@ package com.example.springbootcleanarchitecture.module.org.adapter.out.persisten
 import com.example.springbootcleanarchitecture.common.annotation.PersistenceAdapter;
 import com.example.springbootcleanarchitecture.module.org.application.port.out.OrgPort;
 import com.example.springbootcleanarchitecture.module.org.domain.model.Org;
+import com.example.springbootcleanarchitecture.repository.OrgRepository;
 
 @PersistenceAdapter
 public class OrgAdapter implements OrgPort {
