@@ -3,7 +3,7 @@ spring:
     name: spring-boot-clean-architecture
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/my_db?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/my_db?useUnicode=true&characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: secret
     hikari:
@@ -43,6 +43,10 @@ server:
     enabled: true
     mime-types: text/html,text/xml,text/plain,text/css,application/javascript,application/json,image/svg+xml
     min-response-size: 1024
-
+logging:
+  level:
+    ROOT: INFO
+    org.hibernate.SQL: INFO
+    com.example.springbootcleanarchitecture: DEBUG
 application:
   name: appName

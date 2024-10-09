@@ -3,6 +3,7 @@ package com.example.springbootcleanarchitecture.module.org.adapter.out.persisten
 import com.example.springbootcleanarchitecture.common.annotation.PersistenceAdapter;
 import com.example.springbootcleanarchitecture.common.exception.AdapterException;
 import com.example.springbootcleanarchitecture.entity.OrgEntity;
+import com.example.springbootcleanarchitecture.entity.OrgEntity_;
 import com.example.springbootcleanarchitecture.module.org.application.port.out.QueryOrgPort;
 import com.example.springbootcleanarchitecture.module.org.domain.model.Org;
 import com.example.springbootcleanarchitecture.module.org.domain.query.OrgCriteria;
